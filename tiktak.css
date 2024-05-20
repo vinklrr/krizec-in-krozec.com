@@ -1,0 +1,212 @@
+body {
+  
+  font-family: sans-serif;
+  background: url('fa.jpg') no-repeat center center fixed;
+  background-size:cover;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  border: 5px solid black; /* Izrazita obroba */
+}
+
+td {
+  width: 150px; /* Povečaj velikost celic */
+  height: 150px; /* Povečaj velikost celic */
+  text-align: center;
+  vertical-align: middle;
+  font-size: 64px; /* Povečaj velikost besedila */
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+.cell {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.cell.x {
+  color: rgb(58, 57, 57);
+}
+
+.cell.o {
+  color: rgb(0, 0, 0);
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 36px; /* Povečaj velikost besedila */
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+#reset-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#reset-button:hover {
+  background-color: #aaa;
+}
+
+td:hover {
+  background-color: #ccc;
+}
+
+#reset-button {
+  transition: background-color 0.5s ease;
+}
+
+@keyframes clap {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-5deg); }
+  20% { transform: rotate(3deg); }
+  30% { transform: rotate(-3deg); }
+  40% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  60% { transform: rotate(-1deg); }
+  70% { transform: rotate(1deg); }
+  80% { transform: rotate(-1deg); }
+  90% { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.clap {
+  animation: clap 1s ease-in-out;
+  transform-origin: center;
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+#play-pause {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+
+}
+
+button {
+  background-color: #3498db; 
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover {
+  opacity: 0.8; 
+}
+
+#pause {
+  background-color: #f44336; 
+}
+
+
+
+@keyframes winningAnimation {
+  0% { background-color: transparent; }
+  50% { background-color: yellow; }
+  100% { background-color: transparent; }
+}
+
+.winning-cell {
+  animation: winningAnimation 1s infinite;
+}
+
+@keyframes drawAnimation {
+  0% { background-color: blue; }
+  50% { background-color: white; }
+  100% { background-color: blue; }
+}
+
+.draw-animation {
+  animation: drawAnimation 0.5s ease-in-out infinite;
+}
+
+#scores {
+  position: fixed;
+  top: 150px;
+  left: 80%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.3);
+  text-align:justify;
+}
+
+#reset-scores {
+  margin-top: 10px;
+  display: block; /* Dodano: prikaži gumb */
+  background-color: #254474;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 200px; /* Dodano: določi širino gumba */
+  margin: 0 auto; /* Dodano: postavi gumb na sredino */
+}
+
+#reset-scores:hover {
+  background-color: #64222279;
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight:900;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+#scores img {
+  width: 64px; /* Povečaj velikost slik */
+  height: auto; /* Ohrani razmerje stranic */
+  margin-right: 30px; /* Dodaj razmak med dvema slikama */
+}
+ 
+
+@keyframes buttonPress {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.32);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('pot/do/vashe-font-datoteke.ttf');
+}
+
+#header {
+  text-align: center;
+  padding: none /* Dodaj malo prostora zgoraj in spodaj besedila */
+  background-color: #441464; /* Barva ozadja vrstice */
+  color: #fff; /* Barva besedila */
+  font-size: 30px; /* Velikost besedila */
+  font-weight: bold; /* Krepko */
+  font-family: 'MyCustomFont', sans-serif; /* Uporaba vaše pisave */
+}
+
